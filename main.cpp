@@ -95,7 +95,7 @@ private:
 
 
 int main() {
-    fs::path dir_path = fs::current_path().parent_path() / "питер";
+    fs::path dir_path = fs::current_path() / "питер";
     auto result = Result();
     for (auto&& p: fs::recursive_directory_iterator(dir_path)) {
         if (p.is_directory()) continue;
